@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple example - Editor.md examples</title>
+    <!-- Editor css... -->
+    <link rel="stylesheet" href="../Editor/css/style.css" />
+    <link rel="stylesheet" href="../Editor/css/editormd.css" />
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../Editor/js/editormd.min.js"></script>
+</head>
+<body>
+
+    <header>
+    </header>
+    <script type="text/javascript">
+        var testEditor;
+        $(function() {
+            testEditor = editormd("test-editormd", {
+                width   : "98%",
+                height  : 300,
+                syncScrolling : "single",
+                path    : "./Editor/lib/", //依赖lib文件夹路径
+                emoji : true,
+                taskList : true,
+                tocm     : true,
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "imageUpload"		//上传图片控制器Mapping
+            });
+        });
+    </script>
+
+    <!-- Editor容器... -->
+    <div id="test-editormd">
+        <textarea id="content" name="content" style="display:none;"></textarea>
+    </div>
+
+</body>
+</html>
